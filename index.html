@@ -22,7 +22,7 @@
             <input type="password" id="password" placeholder="password" name="" value="" required>
     </div>
 
-     <button class="btn ">Login</button> 
+     <button class="btn" onclick="checkLogin()">Login</button> 
 
      <div class="remember">
            <input type="checkbox" checked="checked">remember me 
@@ -30,5 +30,24 @@
     </div>
 
 </div>
+<script>
+function checkLogin() {
+    var username = document.getElementById("name").value;
+    var password = document.getElementById("password").value;
+
+    
+    if (username === "" || password === "") {
+        alert("الرجاء تعبئة جميع الحقول");
+        return;
+    }
+
+   
+    if (username === "admin" && password === "123") {
+        window.location.href = "page1.html";
+    } else {
+        alert("الاسم أو الرمز غير صحيح");
+    }
+}
+</script>
 </body>
 </html>
